@@ -20,10 +20,6 @@ router.get('/list-review',
   reviewController.listReviews
 );
 
-router.get('/get-review/:reviewId',
-  reviewController.getReviews
-);
-
 router.put('/update-review/:reviewId',
   validate(reviewValidation.updateReview),
   reviewController.updateReviews
@@ -32,34 +28,6 @@ router.put('/update-review/:reviewId',
 router.delete('/delete-review/:reviewId',
   validate(reviewValidation.deleteReview),
   reviewController.deleteReviews
-);
-
-router.get('/user-with-product/:userId',
-  reviewController.userWithProduct
-);
-
-router.get('/list-review-by-product/:productId',
-  reviewController.listReviewsByProduct
-);
-
-router.get('/no-reviews',
-  reviewController.noReviews
-);
-
-router.get('/top-rated-products',
-  reviewController.topRatedProducts
-);
-
-router.get('/review-with-user/:userId',
-  reviewController.reviewWithUser
-);
-
-router.get('/with-comments',
-  reviewController.withComments
-);
-
-router.get('/count-review-by-product',
-  reviewController.countReviewByProduct
 );
 
 module.exports = router;

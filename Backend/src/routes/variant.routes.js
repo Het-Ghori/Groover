@@ -25,10 +25,6 @@ router.get('/list-variant',
   variantController.listVariants
 );
 
-router.get('/get-variant/:variantId',
-  variantController.getVariants
-);
-
 router.put('/update-variant/:variantId',
   validate(variantValidation.updateVariant),
   variantController.updateVariants
@@ -37,38 +33,6 @@ router.put('/update-variant/:variantId',
 router.delete('/delete-variant/:variantId',
   validate(variantValidation.deleteVariant),
   variantController.deleteVariant
-);
-
-router.get('/product/:productId',
-  variantController.product
-);
-
-router.get('/list-variant/:productId',
-  variantController.listVariantByProductId
-);
-
-router.get('/count-stock/:productId',
-  variantController.countStock
-);
-
-router.get('/low-quantity',
-  variantController.lowQuantity
-);
-
-router.get('/high-price',
-  variantController.highPrice
-);
-
-router.get('/multiple-variants',
-  variantController.multipleVariants
-);
-
-router.get('/active',
-  variantController.activeVariant
-);
-
-router.get('/count-products',
-  variantController.countProducts
 );
 
 module.exports = router;
