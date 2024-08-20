@@ -1,12 +1,11 @@
 const express = require('express');
-const { userController } = require('../../controller');
-const validate = require('../../middleware/validate');
-const { userValidation } = require('../../validation');
 const passport = require('passport');
-const upload = require('../../services/upload');
-const { sendOTP, verifyOTP } = require('../../services/otpSender');
-
+// const { sendOTP, verifyOTP } = require('../../services/otpSender');
+const { userController } = require('../controller/controller_index');
+const validate = require('../middleware/validate');
+const { userValidation } = require('../validation/validation_index');
 const router = express.Router();
+const upload = require('../services/upload');
 
 // {
 //     "_id": 50,
@@ -28,25 +27,25 @@ router.post('/login',
     userController.login
 );
 
-router.post(
-    '/sendOTP',
-    sendOTP,
-    (req, res, next) => {
-        res.status(200).json({
-            message: 'OTP Send In Your Mobile Number'
-        })
-    }
-);
+// router.post(
+//     '/sendOTP',
+//     sendOTP,
+//     (req, res, next) => {
+//         res.status(200).json({
+//             message: 'OTP Send In Your Mobile Number'
+//         })
+//     }
+// );
 
-router.post(
-    '/verifyOTP',
-    verifyOTP,
-    (req, res, next) => {
-        res.status(200).json({
-            message: 'OTP Verification Successfully'
-        })
-    }
-);
+// router.post(
+//     '/verifyOTP',
+//     verifyOTP,
+//     (req, res, next) => {
+//         res.status(200).json({
+//             message: 'OTP Verification Successfully'
+//         })
+//     }
+// );
 
 router.post('/generate-new-tokens',
     userController.generateNewTokens

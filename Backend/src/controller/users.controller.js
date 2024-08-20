@@ -2,8 +2,8 @@ const Users = require("../models/users.model");
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { uploadFile } = require("../services/cloudinary");
-const mailSender = require("../services/mailSender");
-const createPdf = require("../services/createPdf");
+// const mailSender = require("../services/mailSender");
+// const createPdf = require("../services/createPdf");
 
 const createAccessRefreshToken = async (user_id) => {
   try {

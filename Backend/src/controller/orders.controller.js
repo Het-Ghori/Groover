@@ -1,7 +1,7 @@
 const path = require("path");
 const Orders = require("../models/orders.model");
-const createPdf = require("../services/createPdf");
-const mailSender = require("../services/mailSender");
+// const createPdf = require("../services/createPdf");
+// const mailSender = require("../services/mailSender");
 const fs = require('fs');
 
 const placeOrder = async (req, res) => {

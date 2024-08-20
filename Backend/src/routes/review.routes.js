@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const validate = require('../../middleware/validate');
-const { reviewValidation } = require('../../validation');
-const { reviewController } = require('../../controller');
+const validate = require('../middleware/validate');
+const { reviewValidation } = require('../validation/validation_index');
+const { reviewController } = require('../controller/controller_index');
 
 // {
 //   "_id": 50,

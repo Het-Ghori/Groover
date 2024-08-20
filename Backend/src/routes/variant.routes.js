@@ -1,9 +1,8 @@
 const express = require('express');
-const { variantController } = require('../../controller');
-const validate = require('../../middleware/validate');
-const { variantValidation } = require('../../validation');
+const validate = require('../middleware/validate');
+const { variantValidation } = require('../validation/validation_index');
+const { variantController } = require('../controller/controller_index');
 const router = express.Router();
-
 
 // {
 //   "_id": 50,
